@@ -1,1 +1,11 @@
-numpy==2.4.6
+torch
+torchvision
+ultralytics
+transformers
+pycocotools
+opencv-python
+pandas
+matplotlib
+tqdm
+numpy
+timm
