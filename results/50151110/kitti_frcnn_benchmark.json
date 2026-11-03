@@ -1,0 +1,766 @@
+{
+  "model": "frcnn",
+  "detector": {
+    "model": "fasterrcnn_resnet50_fpn_v2",
+    "weights": "COCO_V1",
+    "score_thr": 0.001,
+    "nms_thr": 0.5,
+    "max_dets": 100,
+    "input": "resized internally, min_side=(800,), max_side=1333"
+  },
+  "args": {
+    "model": "frcnn",
+    "ann": "data/kitti/annotations/vehicle_person_train.json",
+    "img_dir": "data/kitti/training/image_2",
+    "max_images": 100,
+    "warmup": 20,
+    "iterations": 100,
+    "score_thr": 0.001,
+    "nms_thr": null,
+    "imgsz": 640,
+    "device": "cuda",
+    "out": "results/domains/50151110/kitti_frcnn_benchmark.json"
+  },
+  "command": "/ocean/projects/cis260281p/jpatel17/envs/det/bin/python src/benchmark.py --model frcnn --device cuda --score-thr 0.001 --ann data/kitti/annotations/vehicle_person_train.json --img-dir data/kitti/training/image_2 --max-images 100 --warmup 20 --iterations 100 --out results/domains/50151110/kitti_frcnn_benchmark.json",
+  "cwd": "/ocean/projects/cis260281p/jpatel17/object-detection-benchmark",
+  "protocol": {
+    "batch_size": 1,
+    "timing": "predict(): preprocessing, device transfers, inference, postprocessing, CPU outputs",
+    "excluded": "model loading, image file loading/decoding, warmup",
+    "image_order": "sorted image ID, repeated cyclically; timed loop restarts at first image",
+    "cuda_synchronize": true,
+    "memory": "PyTorch allocator peak after warmup; includes resident weights; excludes non-PyTorch allocations",
+    "fps": "1000 / mean latency in ms; serial batch-size-1 throughput"
+  },
+  "num_images": 100,
+  "images": [
+    {
+      "id": 0,
+      "file_name": "000000.png",
+      "width": 1224,
+      "height": 370
+    },
+    {
+      "id": 1,
+      "file_name": "000001.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 2,
+      "file_name": "000002.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 3,
+      "file_name": "000003.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 4,
+      "file_name": "000004.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 5,
+      "file_name": "000005.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 6,
+      "file_name": "000006.png",
+      "width": 1238,
+      "height": 374
+    },
+    {
+      "id": 7,
+      "file_name": "000007.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 8,
+      "file_name": "000008.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 9,
+      "file_name": "000009.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 10,
+      "file_name": "000010.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 11,
+      "file_name": "000011.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 12,
+      "file_name": "000012.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 13,
+      "file_name": "000013.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 14,
+      "file_name": "000014.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 15,
+      "file_name": "000015.png",
+      "width": 1238,
+      "height": 374
+    },
+    {
+      "id": 16,
+      "file_name": "000016.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 17,
+      "file_name": "000017.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 18,
+      "file_name": "000018.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 19,
+      "file_name": "000019.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 20,
+      "file_name": "000020.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 21,
+      "file_name": "000021.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 22,
+      "file_name": "000022.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 23,
+      "file_name": "000023.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 24,
+      "file_name": "000024.png",
+      "width": 1241,
+      "height": 376
+    },
+    {
+      "id": 25,
+      "file_name": "000025.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 26,
+      "file_name": "000026.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 27,
+      "file_name": "000027.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 28,
+      "file_name": "000028.png",
+      "width": 1224,
+      "height": 370
+    },
+    {
+      "id": 29,
+      "file_name": "000029.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 30,
+      "file_name": "000030.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 31,
+      "file_name": "000031.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 32,
+      "file_name": "000032.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 33,
+      "file_name": "000033.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 34,
+      "file_name": "000034.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 35,
+      "file_name": "000035.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 36,
+      "file_name": "000036.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 37,
+      "file_name": "000037.png",
+      "width": 1241,
+      "height": 376
+    },
+    {
+      "id": 38,
+      "file_name": "000038.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 39,
+      "file_name": "000039.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 40,
+      "file_name": "000040.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 41,
+      "file_name": "000041.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 42,
+      "file_name": "000042.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 43,
+      "file_name": "000043.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 44,
+      "file_name": "000044.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 45,
+      "file_name": "000045.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 46,
+      "file_name": "000046.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 47,
+      "file_name": "000047.png",
+      "width": 1241,
+      "height": 376
+    },
+    {
+      "id": 48,
+      "file_name": "000048.png",
+      "width": 1238,
+      "height": 374
+    },
+    {
+      "id": 49,
+      "file_name": "000049.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 50,
+      "file_name": "000050.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 51,
+      "file_name": "000051.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 52,
+      "file_name": "000052.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 53,
+      "file_name": "000053.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 54,
+      "file_name": "000054.png",
+      "width": 1224,
+      "height": 370
+    },
+    {
+      "id": 55,
+      "file_name": "000055.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 56,
+      "file_name": "000056.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 57,
+      "file_name": "000057.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 58,
+      "file_name": "000058.png",
+      "width": 1224,
+      "height": 370
+    },
+    {
+      "id": 59,
+      "file_name": "000059.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 60,
+      "file_name": "000060.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 61,
+      "file_name": "000061.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 62,
+      "file_name": "000062.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 63,
+      "file_name": "000063.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 64,
+      "file_name": "000064.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 65,
+      "file_name": "000065.png",
+      "width": 1238,
+      "height": 374
+    },
+    {
+      "id": 66,
+      "file_name": "000066.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 67,
+      "file_name": "000067.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 68,
+      "file_name": "000068.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 69,
+      "file_name": "000069.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 70,
+      "file_name": "000070.png",
+      "width": 1224,
+      "height": 370
+    },
+    {
+      "id": 71,
+      "file_name": "000071.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 72,
+      "file_name": "000072.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 73,
+      "file_name": "000073.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 74,
+      "file_name": "000074.png",
+      "width": 1224,
+      "height": 370
+    },
+    {
+      "id": 75,
+      "file_name": "000075.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 76,
+      "file_name": "000076.png",
+      "width": 1238,
+      "height": 374
+    },
+    {
+      "id": 77,
+      "file_name": "000077.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 78,
+      "file_name": "000078.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 79,
+      "file_name": "000079.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 80,
+      "file_name": "000080.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 81,
+      "file_name": "000081.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 82,
+      "file_name": "000082.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 83,
+      "file_name": "000083.png",
+      "width": 1238,
+      "height": 374
+    },
+    {
+      "id": 84,
+      "file_name": "000084.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 85,
+      "file_name": "000085.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 86,
+      "file_name": "000086.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 87,
+      "file_name": "000087.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 88,
+      "file_name": "000088.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 89,
+      "file_name": "000089.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 90,
+      "file_name": "000090.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 91,
+      "file_name": "000091.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 92,
+      "file_name": "000092.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 93,
+      "file_name": "000093.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 94,
+      "file_name": "000094.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 95,
+      "file_name": "000095.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 96,
+      "file_name": "000096.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 97,
+      "file_name": "000097.png",
+      "width": 1242,
+      "height": 375
+    },
+    {
+      "id": 98,
+      "file_name": "000098.png",
+      "width": 1241,
+      "height": 376
+    },
+    {
+      "id": 99,
+      "file_name": "000099.png",
+      "width": 1242,
+      "height": 375
+    }
+  ],
+  "env": {
+    "python": "3.11.18",
+    "machine": "Linux-4.18.0-553.22.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "cpu": "x86_64",
+    "device": "cuda:0",
+    "torch": "2.7.1+cu118",
+    "torchvision": "0.22.1+cu118",
+    "ultralytics": "8.4.198",
+    "transformers": "5.22.1",
+    "numpy": "2.4.6",
+    "pillow": "13.0.0",
+    "cuda": "11.8",
+    "cudnn": 90100,
+    "gpu": "Tesla V100-SXM2-32GB",
+    "torch_num_threads": 4
+  },
+  "latency_ms": {
+    "mean": 53.32825387828052,
+    "p50": 53.14788082614541,
+    "p95": 54.66339304111898
+  },
+  "fps": 18.751785916007258,
+  "gpu_memory": {
+    "peak_allocated_mib": 1088.96435546875,
+    "peak_reserved_mib": 2028.0
+  },
+  "samples_ms": [
+    53.49909886717796,
+    52.609045058488846,
+    52.817560732364655,
+    53.33048664033413,
+    54.06493321061134,
+    53.95923834294081,
+    53.082214668393135,
+    53.24222054332495,
+    52.66978871077299,
+    53.389218635857105,
+    53.59320156276226,
+    53.07576060295105,
+    52.79195122420788,
+    53.556314669549465,
+    52.64107324182987,
+    53.06847766041756,
+    52.72484477609396,
+    53.35249658674002,
+    54.262702353298664,
+    54.21745963394642,
+    53.23485750705004,
+    53.11950948089361,
+    52.62789689004421,
+    53.68520598858595,
+    54.4392429292202,
+    53.724490106105804,
+    53.39264124631882,
+    53.12701407819986,
+    52.58555430918932,
+    52.88174748420715,
+    52.71628126502037,
+    52.88787744939327,
+    53.0858114361763,
+    54.24629058688879,
+    54.09455206245184,
+    53.14590595662594,
+    52.87173669785261,
+    52.92562488466501,
+    53.36253345012665,
+    54.21510897576809,
+    53.958965465426445,
+    53.161708638072014,
+    52.94520128518343,
+    52.604022435843945,
+    52.685786969959736,
+    52.67803557217121,
+    52.843536250293255,
+    53.75895369797945,
+    54.95334044098854,
+    54.14662882685661,
+    53.235494531691074,
+    52.92203743010759,
+    52.62496415525675,
+    53.116511553525925,
+    54.051014594733715,
+    54.223946295678616,
+    53.06757893413305,
+    53.11065539717674,
+    52.730195224285126,
+    52.68316622823477,
+    52.77171451598406,
+    52.84358374774456,
+    53.30490227788687,
+    54.052529856562614,
+    54.66091725975275,
+    53.644866682589054,
+    53.050173446536064,
+    52.87451483309269,
+    53.143925964832306,
+    53.79798915237188,
+    54.8470439389348,
+    53.30303218215704,
+    53.061576560139656,
+    52.90153995156288,
+    52.86409147083759,
+    52.6586240157485,
+    53.14985569566488,
+    53.026637993752956,
+    53.267416544258595,
+    53.980073891580105,
+    54.91699744015932,
+    53.33968810737133,
+    53.33047639578581,
+    53.45418397337198,
+    53.036462515592575,
+    53.538248874247074,
+    54.71043288707733,
+    53.46302501857281,
+    53.19430585950613,
+    52.76021733880043,
+    53.328665904700756,
+    52.663037553429604,
+    52.77642514556646,
+    52.843570709228516,
+    53.39543242007494,
+    53.60828246921301,
+    54.717496037483215,
+    53.13233472406864,
+    52.834716625511646,
+    52.7566634118557
+  ]
+}

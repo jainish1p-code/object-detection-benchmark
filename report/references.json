@@ -1,0 +1,14 @@
+[
+  {"id": 1, "kind": "research", "citation": "S. Ren, K. He, R. Girshick, and J. Sun. Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks. NeurIPS, 2015.", "url": "https://arxiv.org/abs/1506.01497"},
+  {"id": 2, "kind": "research", "citation": "T.-Y. Lin, P. Dollar, R. Girshick, K. He, B. Hariharan, and S. Belongie. Feature Pyramid Networks for Object Detection. CVPR, 2017.", "url": "https://arxiv.org/abs/1612.03144"},
+  {"id": 3, "kind": "research", "citation": "J. Redmon, S. Divvala, R. Girshick, and A. Farhadi. You Only Look Once: Unified, Real-Time Object Detection. CVPR, 2016.", "url": "https://arxiv.org/abs/1506.02640"},
+  {"id": 4, "kind": "research", "citation": "N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko. End-to-End Object Detection with Transformers. ECCV, 2020.", "url": "https://arxiv.org/abs/2005.12872"},
+  {"id": 5, "kind": "research", "citation": "T.-Y. Lin et al. Microsoft COCO: Common Objects in Context. ECCV, 2014.", "url": "https://arxiv.org/abs/1405.0312"},
+  {"id": 6, "kind": "research", "citation": "A. Geiger, P. Lenz, and R. Urtasun. Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite. CVPR, 2012.", "url": "https://www.cvlibs.net/publications/Geiger2012CVPR.pdf"},
+  {"id": 7, "kind": "official", "citation": "PyTorch/torchvision. fasterrcnn_resnet50_fpn_v2, torchvision 0.22 model documentation. Accessed November 2, 2026.", "url": "https://docs.pytorch.org/vision/0.22/models/generated/torchvision.models.detection.fasterrcnn_resnet50_fpn_v2.html"},
+  {"id": 8, "kind": "official", "citation": "Ultralytics. YOLO11 official model documentation (model released 2024). Accessed November 2, 2026.", "url": "https://docs.ultralytics.com/models/yolo11/"},
+  {"id": 9, "kind": "official", "citation": "Hugging Face. Transformers DETR model and image-processor documentation. Accessed November 2, 2026.", "url": "https://huggingface.co/docs/transformers/model_doc/detr"},
+  {"id": 10, "kind": "official", "citation": "COCO Consortium. Official COCO API: PythonAPI/pycocotools/cocoeval.py. Accessed November 2, 2026.", "url": "https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py"},
+  {"id": 11, "kind": "tutorial", "citation": "DeepDataMiningLearning contributors. ngdet Tutorial: Zero-shot 2D detection across datasets. Course repository. Accessed November 2, 2026.", "url": "https://github.com/lkk688/DeepDataMiningLearning/blob/main/DeepDataMiningLearning/ngdet/TUTORIAL.md"},
+  {"id": 12, "kind": "official", "citation": "PyTorch. Previous PyTorch Versions: PyTorch 2.7.1 / torchvision 0.22.1 CUDA 11.8 installation. Accessed November 2, 2026.", "url": "https://pytorch.org/get-started/previous-versions/"}
+]

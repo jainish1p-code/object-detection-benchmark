@@ -1,0 +1,21 @@
+{
+  "results/50149631/detr_benchmark.json": "6106ee3616b4a98fd865dbd6631b7e692c3cc2096b99944858b41b5589a9cd26",
+  "results/50149631/detr_eval.json": "336a7213c4850d03d8be1cb8d6a90efb22e7b4c72bb0cca35cfe4100d9430085",
+  "results/50149631/frcnn_benchmark.json": "e1fc514832744c11ecdd626032275ee4fc314fa3c7a161fdf185e762979e9189",
+  "results/50149631/frcnn_eval.json": "7cbca8934233f8132f3d0180b5ded91e90912bc02e210853129feed6d97f98cc",
+  "results/50149631/packages.txt": "d404afa2639adeae72c3ebafc3057eda4fbeef0054faef1c37e21d17caaf1cf4",
+  "results/50149631/yolo11s_benchmark.json": "ac38a21a7619df3821aede1c967b21c870ed754bebef58d4af0edfff2751c025",
+  "results/50149631/yolo11s_eval.json": "8343237bb7f4e5107347e58194fc701868f74bec005d9067b518e296e265560c",
+  "results/50151110/coco_detr_eval.json": "d15427078ec7b9771078ce333f8279d2341461af8d658851fa8e7fe71426c211",
+  "results/50151110/coco_frcnn_eval.json": "9563f401b7a0d346ec63be0bca6969b694c02d34eb8ed9536233dfa4bb9b4d57",
+  "results/50151110/coco_sanity.json": "caeb42cde6a9b136d03c4b635687ab195ff01a95e2473a6bd6016dc4a2810738",
+  "results/50151110/coco_yolo11s_eval.json": "7b64c3136be449e6f1e9ed40c8347bd8f4242d8075568158a2557f1d47afd93a",
+  "results/50151110/kitti_detr_benchmark.json": "af562edd6346ebe9d71fef502792ee3706c9cfe826a7681a800190583f7adc59",
+  "results/50151110/kitti_detr_eval.json": "36e76cc4f2a78be2d95ea3548288061bb0fc038ec930bbab8d982e5bd0bf23e2",
+  "results/50151110/kitti_frcnn_benchmark.json": "f1723f6ee4c4f3af82f3fd1087badb8ca777a62e7f1d88e8dc213e8e4475727d",
+  "results/50151110/kitti_frcnn_eval.json": "bc5f5e74a39c9db298b910e03d88d486a6551af806f236544caf8f0fe3122fea",
+  "results/50151110/kitti_sanity.json": "07867600332606c50dbc7f897a4b6a14e42aff1b4e0adc8bd90a5698bac296a5",
+  "results/50151110/kitti_yolo11s_benchmark.json": "68320aaceb9a82d2d8e7ad16a366cef94ec97afcd8f5934f47646995e4134cbd",
+  "results/50151110/kitti_yolo11s_eval.json": "7d229d8d648962cfa88e4d9d0dc2cbca62752df8cb4d20bb9e342af189ecfe3e",
+  "results/50151110/packages.txt": "d404afa2639adeae72c3ebafc3057eda4fbeef0054faef1c37e21d17caaf1cf4"
+}
