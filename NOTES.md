@@ -141,6 +141,18 @@ scripts/build_submission.py generates a nine-page submission/technical_report.pd
 its Markdown source, and submission/experiment_code_and_results.zip. The ZIP contains
 source, Slurm scripts, raw JSONs, package snapshots, both real job logs, CSVs, figures,
 references and command records. It excludes datasets, weights and smoke outputs.
+An alternate nine-page report for non-technical readers is generated separately by
+scripts/build_plain_language_report.py: submission/plain_language_report.pdf and .md,
+with simpler charts in submission/plain_language_figures/. It explains the task,
+score definitions (AP is not percent correct), class/scale weaknesses, processing
+time and memory, evidence and limitations in plain language. It retains the same
+12 references and omits author/course details. The alternate generator leaves the
+technical PDF and ZIP untouched. Both report versions are included in the requested
+GitHub sync; see git history for the published versions. The report generator also
+preserves the README omissions made in GitHub commit c4f73c5.
+The technical report's page 7 contains clickable blue GitHub links to the repository,
+exact experiment commands and both original execution logs. Regenerating the report
+also updates its Markdown source, supporting ZIP and artifact hashes.
 report/references.json contains 12 verified primary references: 6 original research
 papers, 5 official framework/repository sources, and the course tutorial. The PDF
 cites them in its body and includes an AI-use disclosure. Its dedicated failure

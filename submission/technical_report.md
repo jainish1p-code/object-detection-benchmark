@@ -189,11 +189,17 @@ The original commands preserve account-specific Python and output paths. Re-runn
 
 10. How to inspect the submitted evidence
 
-The companion experiment_code_and_results.zip contains executable source and Slurm configurations, raw metrics with image IDs, package snapshots, logs, exported CSVs, figures, references, and exact commands. Dataset images, downloaded weights, and results/smoke are excluded. The SHA-256 manifest identifies the raw report inputs; it is not an independent timestamp or proof of model training provenance.
+The companion experiment_code_and_results.zip contains source, Slurm configurations, raw JSONs, package snapshots, logs, CSV tables, figures, references, and exact commands. The following blue links open the code and actual execution evidence on GitHub:
 
-Start with README.md and results/summary/commands.md. Native backups are in results/50149631/ and shared-domain backups in results/50151110/. accuracy.csv contains all AP/AR statistics; per_class_ap.csv and coco_per_class.md contain all 80 native classes plus shared-class results. benchmarks.csv preserves timing and allocated/reserved memory. No dataset images are needed to regenerate the report from these artifacts.
+[Code and configurations: github.com/jainish1p-code/object-detection-benchmark](https://github.com/jainish1p-code/object-detection-benchmark)
 
-Regenerate tables/plots: python scripts/make_report.py. Regenerate this PDF and archive: python scripts/build_submission.py. Validate synthetic evaluator behavior: python -m unittest discover -s scripts -p 'test_*.py'. The report generator also checks counts/IDs, metadata, sanity results, and timing summaries against raw samples.
+[Exact experiment commands: results/summary/commands.md](https://github.com/jainish1p-code/object-detection-benchmark/blob/main/results/summary/commands.md)
+
+[COCO execution log: results/coco_50149631.log](https://github.com/jainish1p-code/object-detection-benchmark/blob/main/results/coco_50149631.log)
+
+[COCO/KITTI execution log: results/domains_50151110.log](https://github.com/jainish1p-code/object-detection-benchmark/blob/main/results/domains_50151110.log)
+
+Start with README.md. Native backups are in results/50149631/; shared-domain backups are in results/50151110/. results/summary/ contains all AP/AR tables, 80-class AP, timing/memory CSVs, and a source-input SHA-256 manifest. Dataset images, weights, and smoke outputs are excluded from the ZIP. Regenerate tables with python scripts/make_report.py, or this PDF/archive with python scripts/build_submission.py. The generators validate saved image IDs, sanity scores, and timing summaries. The synthetic test command is python -m unittest discover -s scripts -p 'test_*.py'.
 
 # Page 8: Conclusions, limitations, and AI assistance
 
@@ -225,48 +231,48 @@ Six original research papers [1–6], five official repository/framework sources
 
 [1] S. Ren, K. He, R. Girshick, and J. Sun. Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks. NeurIPS, 2015.
 
-https://arxiv.org/abs/1506.01497
+[https://arxiv.org/abs/1506.01497](https://arxiv.org/abs/1506.01497)
 
 [2] T.-Y. Lin, P. Dollar, R. Girshick, K. He, B. Hariharan, and S. Belongie. Feature Pyramid Networks for Object Detection. CVPR, 2017.
 
-https://arxiv.org/abs/1612.03144
+[https://arxiv.org/abs/1612.03144](https://arxiv.org/abs/1612.03144)
 
 [3] J. Redmon, S. Divvala, R. Girshick, and A. Farhadi. You Only Look Once: Unified, Real-Time Object Detection. CVPR, 2016.
 
-https://arxiv.org/abs/1506.02640
+[https://arxiv.org/abs/1506.02640](https://arxiv.org/abs/1506.02640)
 
 [4] N. Carion, F. Massa, G. Synnaeve, N. Usunier, A. Kirillov, and S. Zagoruyko. End-to-End Object Detection with Transformers. ECCV, 2020.
 
-https://arxiv.org/abs/2005.12872
+[https://arxiv.org/abs/2005.12872](https://arxiv.org/abs/2005.12872)
 
 [5] T.-Y. Lin et al. Microsoft COCO: Common Objects in Context. ECCV, 2014.
 
-https://arxiv.org/abs/1405.0312
+[https://arxiv.org/abs/1405.0312](https://arxiv.org/abs/1405.0312)
 
 [6] A. Geiger, P. Lenz, and R. Urtasun. Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite. CVPR, 2012.
 
-https://www.cvlibs.net/publications/Geiger2012CVPR.pdf
+[https://www.cvlibs.net/publications/Geiger2012CVPR.pdf](https://www.cvlibs.net/publications/Geiger2012CVPR.pdf)
 
 [7] PyTorch/torchvision. fasterrcnn_resnet50_fpn_v2, torchvision 0.22 model documentation. Accessed November 2, 2026.
 
-https://docs.pytorch.org/vision/0.22/models/generated/torchvision.models.detection.fasterrcnn_resnet50_fpn_v2.html
+[https://docs.pytorch.org/vision/0.22/models/generated/torchvision.models.detection.fasterrcnn_resnet50_fpn_v2.html](https://docs.pytorch.org/vision/0.22/models/generated/torchvision.models.detection.fasterrcnn_resnet50_fpn_v2.html)
 
 [8] Ultralytics. YOLO11 official model documentation (model released 2024). Accessed November 2, 2026.
 
-https://docs.ultralytics.com/models/yolo11/
+[https://docs.ultralytics.com/models/yolo11/](https://docs.ultralytics.com/models/yolo11/)
 
 [9] Hugging Face. Transformers DETR model and image-processor documentation. Accessed November 2, 2026.
 
-https://huggingface.co/docs/transformers/model_doc/detr
+[https://huggingface.co/docs/transformers/model_doc/detr](https://huggingface.co/docs/transformers/model_doc/detr)
 
 [10] COCO Consortium. Official COCO API: PythonAPI/pycocotools/cocoeval.py. Accessed November 2, 2026.
 
-https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py
+[https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py](https://github.com/cocodataset/cocoapi/blob/master/PythonAPI/pycocotools/cocoeval.py)
 
 [11] DeepDataMiningLearning contributors. ngdet Tutorial: Zero-shot 2D detection across datasets. Course repository. Accessed November 2, 2026.
 
-https://github.com/lkk688/DeepDataMiningLearning/blob/main/DeepDataMiningLearning/ngdet/TUTORIAL.md
+[https://github.com/lkk688/DeepDataMiningLearning/blob/main/DeepDataMiningLearning/ngdet/TUTORIAL.md](https://github.com/lkk688/DeepDataMiningLearning/blob/main/DeepDataMiningLearning/ngdet/TUTORIAL.md)
 
 [12] PyTorch. Previous PyTorch Versions: PyTorch 2.7.1 / torchvision 0.22.1 CUDA 11.8 installation. Accessed November 2, 2026.
 
-https://pytorch.org/get-started/previous-versions/
+[https://pytorch.org/get-started/previous-versions/](https://pytorch.org/get-started/previous-versions/)

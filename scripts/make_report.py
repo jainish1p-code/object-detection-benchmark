@@ -241,7 +241,6 @@ Submission artifacts: [nine-page technical report](submission/technical_report.p
 and [experiment code/results archive](submission/experiment_code_and_results.zip).
 The PDF includes a dedicated quantitative failure analysis, AI-use disclosure, and
 12 references (six original research papers and five official framework/repository sources).
-Author and course title are omitted at the user's request.
 
 ## Main findings
 
@@ -501,12 +500,8 @@ visual domain. Label merging and KITTI's custom ignore policy affect interpretat
 No fine-tuning, open-vocabulary comparison or causal ablation is claimed. Training-set
 provenance beyond the named COCO-pretrained checkpoints was not audited for overlap.
 
-The report covers three configurations/families, two datasets, accuracy/recall and
-per-class/scale metrics, latency/FPS, GPU memory, reproducibility details and the two
-required technical analyses. Datasets, downloaded weights and smoke outputs must not
-be committed. Keep both datasets and archives until the homework has been reviewed.
 """
-    Path("README.md").write_text(readme)
+    Path("README.md").write_text(readme.rstrip() + "\n")
     print(f"Validated {len(evaluations)} evaluations, {len(benchmarks)} benchmarks, and 2 sanity runs.")
     print("Wrote README.md, four CSV tables, exact commands, class appendix, source hashes, and three PNG/PDF figures.")
 

@@ -72,10 +72,10 @@ class Page:
         leading = size * 1.38
         for line in self.wrap(text, size, family, weight):
             self.ax.text(MARGIN, self.y, line, fontsize=size, va="top", family=family,
-                         weight=weight, color="#17212b", url=url)
+                         weight=weight, color="#1d4ed8" if url else "#17212b", url=url)
             self.y -= leading
         self.y -= gap
-        self.markdown.extend([text, ""])
+        self.markdown.extend([f"[{text}]({url})" if url else text, ""])
 
     def heading(self, text):
         self.y -= 2
@@ -274,9 +274,17 @@ def main():
         p.text(domain['kitti','frcnn']['command'], size=7.7, family="DejaVu Sans Mono", gap=9)
         p.text("The original commands preserve account-specific Python and output paths. Re-running the batch scripts generates new job-ID directories. Installation uses torch 2.7.1 / torchvision 0.22.1 from the cu118 index [12] followed by requirements.txt; the two saved packages.txt files define the observed full environment more precisely than unpinned dependency resolution.", size=9)
         p.heading("10. How to inspect the submitted evidence")
-        p.text("The companion experiment_code_and_results.zip contains executable source and Slurm configurations, raw metrics with image IDs, package snapshots, logs, exported CSVs, figures, references, and exact commands. Dataset images, downloaded weights, and results/smoke are excluded. The SHA-256 manifest identifies the raw report inputs; it is not an independent timestamp or proof of model training provenance.")
-        p.text("Start with README.md and results/summary/commands.md. Native backups are in results/50149631/ and shared-domain backups in results/50151110/. accuracy.csv contains all AP/AR statistics; per_class_ap.csv and coco_per_class.md contain all 80 native classes plus shared-class results. benchmarks.csv preserves timing and allocated/reserved memory. No dataset images are needed to regenerate the report from these artifacts.")
-        p.text("Regenerate tables/plots: python scripts/make_report.py. Regenerate this PDF and archive: python scripts/build_submission.py. Validate synthetic evaluator behavior: python -m unittest discover -s scripts -p 'test_*.py'. The report generator also checks counts/IDs, metadata, sanity results, and timing summaries against raw samples.", size=9)
+        p.text("The companion experiment_code_and_results.zip contains source, Slurm configurations, raw JSONs, package snapshots, logs, CSV tables, figures, references, and exact commands. The following blue links open the code and actual execution evidence on GitHub:")
+        repository = "https://github.com/jainish1p-code/object-detection-benchmark"
+        p.text("Code and configurations: github.com/jainish1p-code/object-detection-benchmark",
+               size=8.4, gap=3, url=repository)
+        p.text("Exact experiment commands: results/summary/commands.md",
+               size=8.4, gap=3, url=repository + "/blob/main/results/summary/commands.md")
+        p.text("COCO execution log: results/coco_50149631.log",
+               size=8.4, gap=3, url=repository + "/blob/main/results/coco_50149631.log")
+        p.text("COCO/KITTI execution log: results/domains_50151110.log",
+               size=8.4, gap=8, url=repository + "/blob/main/results/domains_50151110.log")
+        p.text("Start with README.md. Native backups are in results/50149631/; shared-domain backups are in results/50151110/. results/summary/ contains all AP/AR tables, 80-class AP, timing/memory CSVs, and a source-input SHA-256 manifest. Dataset images, weights, and smoke outputs are excluded from the ZIP. Regenerate tables with python scripts/make_report.py, or this PDF/archive with python scripts/build_submission.py. The generators validate saved image IDs, sanity scores, and timing summaries. The synthetic test command is python -m unittest discover -s scripts -p 'test_*.py'.", size=9)
         p.finish()
 
         p = Page(8, "Conclusions, limitations, and AI assistance", pdf, md)
